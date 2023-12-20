@@ -28,4 +28,18 @@ export class HeroComponent {
   changeAge():void {
     this.age = 23;
   }
+
+  resetForm():void {
+    this.name = 'Iron Man';
+    this.age = 45 ;
+
+    // Cambiamos todos los h1 con querys
+    // fuera del ciclo de deteccion de angular
+    document.querySelectorAll('h1')!.forEach(
+      element =>{
+        element.innerHTML = '<h1> Holis desde Angular </h1>'
+      }
+    )
+  }
+
 }
